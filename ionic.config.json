@@ -1,6 +1,8 @@
 {
   "name": "bestDriver",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular",
   "id": "ceb336bb"
 }
