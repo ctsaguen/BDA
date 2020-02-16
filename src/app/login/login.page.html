@@ -1,42 +1,38 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title color="primary">connexion</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-  <br/>
-    <div class="text-center">
-        <img class="img-responsive center-block" src="assets/icon/favicon.png">
-    </div>
-    <br>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 py-8">
-                <div class="row">
-                    <div class="col-md-6 mx-auto">
-                        <div class="card rounded-0">
-                            <div class="card-header">
-                                <h3 class="mb-0 text-center">Best Driver Aquitaine</h3>
-                            </div>
-                            <div class="card-body">
-                                <div class="form-group">
-                                    <ion-label for="uname1">Email</ion-label>
-                                    <ion-input type="email" class="form-control form-control-lg rounded-0" name="uname1" id="uname1" required="" [(ngModel)]="user.email"></ion-input>
-                                </div>
-                                <div class="form-group">
-                                  <ion-label> Mot de passe</ion-label>
-                                  <ion-input type="password" class="form-control form-control-lg rounded-0" id="pwd1" required="" autocomplete="new-password" [(ngModel)]="user.password"></ion-input>
-                                </div>
-                                <div class="text-right">
-                                  <ion-button color="secondary" (click)="register()">Register</ion-button>
-                                  <ion-button color="primary" (click)="login(user)">Connexion</ion-button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<ion-content color="primary">
+  <ion-grid>
+      <br/>
+    <ion-row>
+        <ion-col class="text-center">
+            <ion-text><h1>Best Driver Aquitaine</h1></ion-text>
+        </ion-col>
+    </ion-row>
+    <ion-row style="margin-top:-18%; margin-bottom:-10%;">
+        <ion-col class="text-center">
+            <img class="img-responsive center-block" width="200" height="200" src="assets/icon/automobile.png">
+        </ion-col>
+    </ion-row>
+    <br/>
+    <ion-row>
+        <ion-col>
+            <ion-input type="text" clearInput placeholder="Email" autocomplete [(ngModel)]="user.email" style="border-bottom-style: solid; border-width:1px; font-size: 120%;"></ion-input>
+        </ion-col>
+      </ion-row>
+      <br/>
+      <ion-row>
+        <ion-col>
+          <ion-input type="password" clearInput placeholder="Password" autocomplete [(ngModel)]="user.password" style="border-bottom-style: solid; border-width:1px; font-size: 120%;"></ion-input>
+        </ion-col>
+    </ion-row>
+    <br/>
+    <ion-row>
+        <ion-col>
+            <ion-button color="light" expand="full" shape="round" (click)="login(user)">Connexion</ion-button>
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col class="text-center">
+            <ion-text>Vous n'avez pas de compte ?</ion-text><ion-text color="secondary" (click)="register()"> Créer un compte</ion-text>   
+        </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
